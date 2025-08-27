@@ -1,6 +1,6 @@
 # Linear Clone
 
-A project management application built with Next.js, inspired by Linear.
+A project management application built with Bun, inspired by Linear.
 
 ## Features
 
@@ -22,7 +22,7 @@ A project management application built with Next.js, inspired by Linear.
 
 ### Prerequisites
 
-- Node.js 16+ and npm/yarn
+- Bun
 - PostgreSQL database (or use a service like [Neon](https://neon.tech/))
 
 ### Installation
