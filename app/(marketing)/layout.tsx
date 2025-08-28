@@ -1,9 +1,9 @@
-interface LayoutProps {
-  children: React.ReactNode
+interface MarketingLayoutProps {
+  children: React.ReactNode;
 }
 
-function Layout({ children }: LayoutProps) {
-  return <div>{children}</div>
+function MarketingLayout({ children }: MarketingLayoutProps) {
+  return <div>{children}</div>;
 }
 
-export default Layout
+export default MarketingLayout;

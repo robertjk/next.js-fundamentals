@@ -1,5 +1,5 @@
-function Home() {
-  return "Home";
+function MarketingPage() {
+  return "Marketing";
 }
 
-export default Home;
+export default MarketingPage;
