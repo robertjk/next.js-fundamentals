@@ -1,5 +1,5 @@
-function Signin() {
+function SigninPage() {
   return "Signin";
 }
 
-export default Signin;
+export default SigninPage;
