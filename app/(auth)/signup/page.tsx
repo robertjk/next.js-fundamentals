@@ -24,25 +24,24 @@ const initialState: ActionResponse = {
 export default function SignUpPage() {
   const router = useRouter();
 
-  // Use useActionState hook for the form submission action
   const [state, formAction, isPending] = useActionState<
     ActionResponse,
     FormData
-  >(async (prevState: ActionResponse, formData: FormData) => {
+  >(async (_: ActionResponse, formData: FormData) => {
     try {
       const result = await signUp(formData);
 
-      // Handle successful submission
+      // Handle successful submissions
       if (result.success) {
         toast.success("Account created successfully");
         router.push("/dashboard");
       }
 
       return result;
-    } catch (err) {
+    } catch (error) {
       return {
         success: false,
-        message: (err as Error).message || "An error occurred",
+        message: (error as Error).message || "An error occurred",
         errors: undefined,
       };
     }
@@ -57,6 +56,9 @@ export default function SignUpPage() {
         <h2 className="mt-2 text-center text-2xl font-bold text-gray-900 dark:text-white">
           Create a new account
         </h2>
+      </div>
+
+      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <Form action={formAction} className="space-y-6">
           {state?.message && !state.success && (
             <FormError>{state.message}</FormError>
@@ -125,9 +127,7 @@ export default function SignUpPage() {
             </Button>
           </div>
         </Form>
-      </div>
 
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white dark:bg-[#1A1A1A] py-8 px-4 shadow sm:rounded-lg sm:px-10 border border-gray-100 dark:border-dark-border-subtle">
           <div className="text-center">
             <p className="text-sm text-gray-600 dark:text-gray-400">
