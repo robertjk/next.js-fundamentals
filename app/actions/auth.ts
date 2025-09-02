@@ -7,7 +7,7 @@ import {
   createUser,
   deleteSession,
 } from "@/lib/auth";
-import { getUserByEmail } from "@/lib/dal";
+import { getUserByEmail } from "@/lib/data-access-layer";
 import { mockDelay } from "@/lib/utils";
 import { redirect } from "next/navigation";
 

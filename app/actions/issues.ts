@@ -3,7 +3,7 @@
 import { db } from "@/db";
 import { issues } from "@/db/schema";
 import { eq } from "drizzle-orm";
-import { getCurrentUser } from "@/lib/dal";
+import { getCurrentUser } from "@/lib/data-access-layer";
 import { z } from "zod";
 import { mockDelay } from "@/lib/utils";
 
