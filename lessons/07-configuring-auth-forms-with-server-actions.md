@@ -169,7 +169,6 @@ export default function SignInPage() {
       if (result.success) {
         toast.success('Signed in successfully')
         router.push('/dashboard')
-        router.refresh()
       }
 
       return result

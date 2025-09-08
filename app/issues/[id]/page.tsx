@@ -8,7 +8,7 @@ import { getIssue } from "@/lib/data-access-layer";
 import { Priority, Status } from "@/lib/types";
 import { formatRelativeTime } from "@/lib/utils";
 
-import DeleteIssueButton from "../../components/DeleteIssueButton";
+import DeleteIssueButton from "./DeleteIssueButton";
 
 interface IssuePageProps {
   params: Promise<{ id: string }>;

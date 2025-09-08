@@ -7,7 +7,6 @@ import { getSession } from "./auth";
 import { mockDelay } from "./utils";
 
 export async function getCurrentUser() {
-  await mockDelay(2000);
   const session = await getSession();
   if (!session) {
     return null;
