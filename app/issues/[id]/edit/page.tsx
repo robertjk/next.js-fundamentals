@@ -1,5 +1,3 @@
-function EditIssuePage() {
+export default function EditIssuePage() {
   return "Edit Issue Page";
 }
-
-export default EditIssuePage;

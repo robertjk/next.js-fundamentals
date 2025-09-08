@@ -1,7 +1,7 @@
 import { eq } from "drizzle-orm";
 
 import { db } from "@/db";
-import { users } from "@/db/schema";
+import { issues, users } from "@/db/schema";
 
 import { getSession } from "./auth";
 import { mockDelay } from "./utils";
@@ -48,5 +48,21 @@ export async function getIssues() {
   } catch (error) {
     console.error("Error fetching issues:", error);
     throw new Error("Failed to fetch issues");
+  }
+}
+
+export async function getIssue(id: number) {
+  try {
+    await mockDelay(2000);
+    const result = await db.query.issues.findFirst({
+      with: {
+        user: true,
+      },
+      where: eq(issues.id, id),
+    });
+    return result;
+  } catch (error) {
+    console.error("Error fetching issue:", error);
+    throw new Error("Failed to fetch issue");
   }
 }
