@@ -1,7 +1,8 @@
 import Link from "next/link";
 
-import { Timestamp } from "../components/Timestamp";
-import Button from "../components/ui/Button";
+import Button from "../components/Button";
+
+import { Timestamp } from "./components/Timestamp";
 
 export default async function LandingPage() {
   return (

@@ -6,7 +6,7 @@ import { useState, useTransition } from "react";
 import toast from "react-hot-toast";
 
 import { deleteIssue } from "@/app/actions/issues";
-import Button from "@/app/components/ui/Button";
+import Button from "@/app/components/Button";
 
 interface DeleteIssueButtonProps {
   id: number;

@@ -6,8 +6,8 @@ import { getIssues } from "@/lib/data-access-layer";
 import { Priority, Status } from "@/lib/types";
 import { formatRelativeTime } from "@/lib/utils";
 
-import Badge from "../components/ui/Badge";
-import Button from "../components/ui/Button";
+import Badge from "../components/Badge";
+import Button from "../components/Button";
 
 export default async function DashboardPage() {
   const issues = await getIssues();

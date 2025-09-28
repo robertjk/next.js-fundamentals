@@ -1,44 +1,50 @@
-import { Issue } from '@/db/schema'
-import { formatRelativeTime } from '@/lib/utils'
-import { Priority, Status } from '@/lib/types'
-import Link from 'next/link'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/Card'
-import Badge from './ui/Badge'
+import { Issue } from "@/db/schema";
+import { formatRelativeTime } from "@/lib/utils";
+import { Priority, Status } from "@/lib/types";
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../components/Card";
+import Badge from "../components/Badge";
 
 interface IssueCardProps {
-  issue: Issue
+  issue: Issue;
 }
 
 export default function IssueCard({ issue }: IssueCardProps) {
-  const { id, title, description, status, priority, createdAt } = issue
+  const { id, title, description, status, priority, createdAt } = issue;
 
   const getStatusLabel = (status: string) => {
     switch (status) {
-      case 'backlog':
-        return 'Backlog'
-      case 'todo':
-        return 'Todo'
-      case 'in_progress':
-        return 'In Progress'
-      case 'done':
-        return 'Done'
+      case "backlog":
+        return "Backlog";
+      case "todo":
+        return "Todo";
+      case "in_progress":
+        return "In Progress";
+      case "done":
+        return "Done";
       default:
-        return status
+        return status;
     }
-  }
+  };
 
   const getPriorityLabel = (priority: string) => {
     switch (priority) {
-      case 'low':
-        return 'Low'
-      case 'medium':
-        return 'Medium'
-      case 'high':
-        return 'High'
+      case "low":
+        return "Low";
+      case "medium":
+        return "Medium";
+      case "high":
+        return "High";
       default:
-        return priority
+        return priority;
     }
-  }
+  };
 
   return (
     <Link href={`/issues/${id}`}>
@@ -64,5 +70,5 @@ export default function IssueCard({ issue }: IssueCardProps) {
         </CardFooter>
       </Card>
     </Link>
-  )
+  );
 }

@@ -2,8 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeftIcon, Edit2Icon } from "lucide-react";
 
-import Badge from "@/app/components/ui/Badge";
-import Button from "@/app/components/ui/Button";
+import Badge from "@/app/components/Badge";
+import Button from "@/app/components/Button";
 import { getIssue } from "@/lib/data-access-layer";
 import { Priority, Status } from "@/lib/types";
 import { formatRelativeTime } from "@/lib/utils";

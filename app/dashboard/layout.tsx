@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 
-import Navigation from "../components/Navigation";
+import Navigation from "./components/Navigation";
 
 type DashboardLayoutProps = PropsWithChildren;
 

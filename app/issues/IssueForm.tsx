@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { createIssue, ActionResponse, updateIssue } from "@/app/actions/issues";
 import { Issue, ISSUE_STATUS, ISSUE_PRIORITY } from "@/db/schema";
 
-import Button from "../components/ui/Button";
+import Button from "../components/Button";
 import {
   Form,
   FormGroup,
@@ -15,7 +15,7 @@ import {
   FormTextarea,
   FormSelect,
   FormError,
-} from "../components/ui/Form";
+} from "../components/Form";
 
 interface IssueFormProps {
   issue?: Issue;

@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { Timestamp } from "../components/Timestamp";
-import Button from "../components/ui/Button";
 import { PropsWithChildren } from "react";
+
+import Button from "@/app/components/Button";
+
+import { Timestamp } from "./components/Timestamp";
 
 type MarketingLayoutProps = PropsWithChildren;
 

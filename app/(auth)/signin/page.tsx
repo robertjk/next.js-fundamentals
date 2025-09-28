@@ -3,14 +3,14 @@
 import { useActionState } from "react";
 import { useRouter } from "next/navigation";
 
-import Button from "@/app/components/ui/Button";
+import Button from "@/app/components/Button";
 import {
   Form,
   FormGroup,
   FormLabel,
   FormInput,
   FormError,
-} from "@/app/components/ui/Form";
+} from "@/app/components/Form";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { signIn, ActionResponse } from "@/app/actions/auth";

@@ -1,5 +1,5 @@
 import { getCurrentUser } from "@/lib/data-access-layer";
-import Button from "./ui/Button";
+import Button from "../components/ui/Button";
 import Link from "next/link";
 
 const DashboardButton = async () => {
