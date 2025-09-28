@@ -1,5 +1,6 @@
 import { getCurrentUser } from "@/lib/data-access-layer";
 import { UserIcon } from "lucide-react";
+
 import SignOutButton from "./SignOutButton";
 
 const UserEmail = async () => {

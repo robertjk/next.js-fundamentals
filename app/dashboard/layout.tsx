@@ -1,6 +1,5 @@
-import { PropsWithChildren, Suspense } from "react";
+import { PropsWithChildren } from "react";
 
-import DashboardSkeleton from "../components/DashboardSkeleton";
 import Navigation from "../components/Navigation";
 
 type DashboardLayoutProps = PropsWithChildren;

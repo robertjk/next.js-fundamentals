@@ -1,8 +1,8 @@
-import { getIssues } from "@/lib/data-access-layer";
 import Link from "next/link";
 import { PlusIcon } from "lucide-react";
 
 import { ISSUE_PRIORITY, ISSUE_STATUS } from "@/db/schema";
+import { getIssues } from "@/lib/data-access-layer";
 import { Priority, Status } from "@/lib/types";
 import { formatRelativeTime } from "@/lib/utils";
 

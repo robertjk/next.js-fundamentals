@@ -1,8 +1,6 @@
 import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
-import { Suspense } from "react";
-
-import NewIssue from "@/app/components/NewIssue";
+import { PropsWithChildren } from "react";
 
 type NewIssuePageProps = PropsWithChildren;
 
